@@ -51,7 +51,7 @@ async function onBtnclick(e) {
   try {
     const data = await getImages(inputName.trim(), page, per_page);
     if (page * per_page >= data.totalHits) {
-      btnLoadRef.classList.add('hidden');
+      btnEl.classList.add('hidden');
       Notify.info("We're sorry, but you've reached the end of search results.", { timeout: 4000 });
     }
     markImage(data.hits);
